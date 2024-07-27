@@ -1,4 +1,3 @@
-const { response } = require("express")
 const { eventModel } = require("../DB/models/eventModel")
 
 exports.getEvents = async (req,res)=>{
