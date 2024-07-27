@@ -40,7 +40,6 @@ exports.addEvents = async (req,res)=>{
 exports.updateEvents = async (req, res)=>{
     try{
         const {title, date, location, description} = req.body;
-        console.log(date.length>10?date : date+"T00:00:00Z")
         await eventModel.updateOne({date:date.length>10?date : date+"T00:00:00Z"},{title,location,description});
         res.status(200).json({
             success:true,
